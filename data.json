@@ -1,0 +1,56 @@
+{
+    "425661467904180224": {
+        "money": 7,
+        "coffee_sold": 24,
+        "cooldown": 1680288934,
+        "creation_date": 1680195327
+    },
+    "372350451561267201": {
+        "money": 5,
+        "coffee_sold": 0,
+        "cooldown": 0,
+        "creation_date": 1680197276
+    },
+    "652219536132669460": {
+        "money": 0,
+        "coffee_sold": 0,
+        "cooldown": 0,
+        "creation_date": 1680197285
+    },
+    "344502606107770880": {
+        "money": 16,
+        "coffee_sold": 15,
+        "cooldown": 1682090845,
+        "creation_date": 1680198206
+    },
+    "560292748574457891": {
+        "money": 70,
+        "coffee_sold": 52,
+        "cooldown": 1682090047,
+        "creation_date": 1680200298
+    },
+    "1059126382128533584": {
+        "money": 14,
+        "coffee_sold": 3,
+        "cooldown": 0,
+        "creation_date": 1680202141
+    },
+    "812945213080993822": {
+        "money": 1,
+        "coffee_sold": 1,
+        "cooldown": 1680363405,
+        "creation_date": 1680208102
+    },
+    "1083586568918409277": {
+        "money": 0,
+        "coffee_sold": 0,
+        "cooldown": 0,
+        "creation_date": 1680208118
+    },
+    "1091792738929877126": {
+        "money": 9,
+        "coffee_sold": 14,
+        "cooldown": 1682089660,
+        "creation_date": 1680435238
+    }
+}

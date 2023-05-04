@@ -1,13 +1,14 @@
-import os, asyncio, config, time, platform
+import os, asyncio, time, platform
 import discord
 from discord.ext import commands
 from colorama import Back, Fore, Style
+from dotenv import load_dotenv
 
 intents = discord.Intents.all()
 intents.message_content = True
 bot = commands.Bot(command_prefix="sc!", intents=intents)
 
-
+load_dotenv()
 
 @bot.event
 async def on_ready():
@@ -33,6 +34,6 @@ async def load():
 
 async def main():
     await load()
-    await bot.start(config.BOT_TOKEN)
+    await bot.start(os.environ.get("BOT_TOKEN"))
 
 asyncio.run(main())

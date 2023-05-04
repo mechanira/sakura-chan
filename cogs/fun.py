@@ -1,4 +1,4 @@
-import discord, random, json, requests, math, datetime, aiohttp, asyncio, config, typing, functions, time
+import discord, random, json, requests, math, datetime, aiohttp, asyncio, typing, functions, time
 from discord import app_commands
 from discord.ext import commands
 from bs4 import BeautifulSoup
@@ -6,58 +6,6 @@ from bs4 import BeautifulSoup
 class fun(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
-
-
-    @app_commands.command(name="action", description="Choose an action on a member")
-    @app_commands.choices(option=[
-        discord.app_commands.Choice(name="bite", value=1),
-        discord.app_commands.Choice(name="boop", value=2),
-        discord.app_commands.Choice(name="feed", value=3),
-        discord.app_commands.Choice(name="hug", value=4),
-        discord.app_commands.Choice(name="kill", value=5),
-        discord.app_commands.Choice(name="kiss", value=6),
-        discord.app_commands.Choice(name="lick", value=7),
-        discord.app_commands.Choice(name="pat", value=8),
-        discord.app_commands.Choice(name="poke", value=9),
-        discord.app_commands.Choice(name="punch", value=10),
-        discord.app_commands.Choice(name="slap", value=11),
-        discord.app_commands.Choice(name="threaten", value=12),
-        discord.app_commands.Choice(name="tickle", value=13)
-    ])
-    async def action(self, interaction: discord.Interaction, option: discord.app_commands.Choice[int], member: discord.Member):
-
-        gif = hmtai.get("hmtai", option.name)
-
-        msg = ["bites", "boops", "feeds", "hugs", "tries to kill", "kisses", "licks", "pats", "pokes", "punches", "slaps", "threatens", "tickles"]
-        
-        emb = discord.Embed()
-        emb.set_image(url=gif)
-
-        await interaction.response.send_message(f"> **{interaction.user.name}** {msg[option.value - 1]} {member.mention}", embed=emb)
-
-    
-    @app_commands.command(name="emote", description="Make your feelings shown")
-    @app_commands.choices(option=[
-        discord.app_commands.Choice(name="cry", value=1),
-        discord.app_commands.Choice(name="dance", value=2),
-        discord.app_commands.Choice(name="like", value=3),
-        discord.app_commands.Choice(name="nosebleed", value=4),
-        discord.app_commands.Choice(name="sleep", value=5)
-    ])
-    async def emote(self, interaction: discord.Interaction, option: app_commands.Choice[int]):
-        gif = hmtai.get("hmtai", option.name)
-
-        msg = ["cries", "does a lil dance", "approves", "nosebleeds", "sleeps"]
-        
-        emb = discord.Embed()
-        emb.set_image(url=gif)
-
-        await interaction.response.send_message(f"> **{interaction.user.name}** {msg[option.value-1]}", embed=emb)
-
-
-    @app_commands.command(name="serotonin", description="Having a bad day? Let me try to cheer you up")
-    async def serotonin(self, interaction: discord.Interaction, option: app_commands.Choice[int]):
-        await interaction.response.send_message("Command not available yet...", ephemeral=True)
 
 
     @app_commands.command(name="qotd", description="Displays a daily qoute")

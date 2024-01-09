@@ -70,7 +70,7 @@ class utils(commands.Cog):
 
         try:
             async with interaction.channel.typing():
-                openai.api_key = "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"
+                openai.api_key = "key"
                 completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": f"{prompt}"}])
                 completed = completion.choices[0].message.content
 
